@@ -1,53 +1,45 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlwebpackPlugin = require('html-webpack-plugin');
-var ROOT_PATH = path.resolve(__dirname);
-var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
-var APP_PATH = path.resolve(ROOT_PATH, 'src');
-module.exports= {
+const path = require('path')
+const HtmlwebpackPlugin = require('html-webpack-plugin')
+
+const ROOT_PATH = path.resolve(__dirname)
+const BUILD_PATH = path.resolve(ROOT_PATH, 'public')
+const APP_PATH = path.resolve(ROOT_PATH, 'src')
+module.exports = {
   entry: {
     app: path.resolve(APP_PATH, 'app.jsx')
   },
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "bundle.js",
+    path: path.resolve(ROOT_PATH, BUILD_PATH),
+    filename: 'bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         include: [
-          path.resolve(__dirname, "src")
+          path.resolve(ROOT_PATH, 'src')
         ],
-        enforce: 'pre',
-        loader: 'eslint-loader',
-      },
-      {
-        test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, "src")
-        ],
-        loader: "babel-loader"
+        loader: 'babel-loader'
       }
     ]
   },
   resolve: {
-    modules: ["node_modules", path.join(__dirname, "src")],
+    modules: ['node_modules', path.join(ROOT_PATH, 'src')],
     extensions: ['.js', '.jsx']
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(ROOT_PATH, 'dist'),
     compress: true,
     port: 9000,
     hot: true,
-    inline: true,
+    inline: true
   },
 
 
   plugins: [
-  new HtmlwebpackPlugin({
-    title: 'My first react app'
-  })
+    new HtmlwebpackPlugin({
+      title: 'React Test App'
+    })
   ]
 }
