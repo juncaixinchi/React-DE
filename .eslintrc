@@ -1,7 +1,22 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
     "rules": {
+      "no-undef": "warn",
+      "max-len": "warn",
+      "no-unused-vars": "warn",
+      "no-shadow": "warn",
+      "default-case": "warn",
+      "no-confusing-arrow": "warn",
+      "no-useless-constructor": "warn",
+      "no-nested-ternary": "off",
+      "no-mixed-operators": "off",
+      "semi": ["warn", "never"],
       "comma-dangle": ["warn", "never"],
-      "no-undef": ["warn"]
+      "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
+      "import/extensions": ["warn", "never"],
+      "react/no-multi-comp": "warn",
+      "react/prop-types": "warn",
+      "react/prefer-stateless-function": ["warn", { "ignorePureComponents": true }]
     }
 }
