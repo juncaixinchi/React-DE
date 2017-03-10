@@ -1,4 +1,30 @@
 import React from 'react'
+import TemperatureInput from './TemperatureInput'
+
+const StateUp = base => class extends base {
+  setSubState(name, nextSubState) {
+    const state = this.props.state || this.state
+    const subState = state[name]
+    const nextSubStateMerged = Object.assign(new subState.constructor(), subState, nextSubState)
+    const nextState = { [name]: nextSubStateMerged }
+    this.props.setState
+      ? this.props.setState(nextState)
+      : this.setState(nextState)
+  }
+
+  setSubStateBound(name) {
+    const obj = this.setSubStateBoundObj || (this.setSubStateBoundObj = {})
+    return obj[name] ? obj[name] : (obj[name] = this.setSubState.bind(this, name))
+  }
+
+  stateBinding(name) {
+    return {
+      state: this.props.state ? this.props.state[name] : this.state[name],
+      setState: this.setSubStateBound(name)
+    }
+  }
+}
+
 
 const BoilingVerdict = (props) => {
   if (props.celsius >= 100) {
@@ -19,37 +45,6 @@ const tryConvert = (value, convert) => {
   const output = convert(input)
   const rounded = Math.round(output * 1000) / 1000
   return rounded.toString()
-}
-
-const scaleNames = {
-  c: 'Celsius',
-  f: 'Fahrenheit'
-}
-
-class Input extends React.Component {
-
-  constructor(props) {
-    super(props)
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(e) {
-    this.props.onChange(e.target.value)
-  }
-
-  render() {
-    const value = this.props.value
-    const scale = this.props.scale
-    return (
-      <fieldset>
-        <legend>Enter value in {scaleNames[scale]}:</legend>
-        <input
-          value={value}
-          onChange={this.handleChange}
-        />
-      </fieldset>
-    )
-  }
 }
 
 export default class Calculator extends React.Component {
@@ -76,12 +71,12 @@ export default class Calculator extends React.Component {
 
     return (
       <div>
-        <Input
+        <TemperatureInput
           scale="c"
           value={celsius}
           onChange={this.handleCelsiusChange}
         />
-        <Input
+        <TemperatureInput
           scale="f"
           value={fahrenheit}
           onChange={this.handleFahrenheitChange}

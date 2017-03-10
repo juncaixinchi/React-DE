@@ -14,9 +14,8 @@ export default class Mui extends React.Component {
       <div className="container">
         <MuiThemeProvider>
           <div>
-            <h1>Hello React !</h1>
-            <Toggle />
             <CatSilhouette />
+            <Toggle />
           </div>
         </MuiThemeProvider>
       </div>
