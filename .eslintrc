@@ -35,7 +35,7 @@
     "import/no-extraneous-dependencies": "warn",
     "import/extensions": ["warn", "never"],
     "react/no-multi-comp": "warn",
-    "react/prop-types": "warn",
+    "react/prop-types": "off",
     "react/prefer-stateless-function": ["warn", { "ignorePureComponents": true }]
     }
 }

@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Mui from './Mui'
-import Calculator from './Calculator'
+import Mui from './mui/Mui'
+import Calculator from './calculator/Calculator'
+import StateUpApp from './stateup/StateUpApp'
 
 const App = () => (
   <div>
@@ -9,6 +10,8 @@ const App = () => (
     <Mui />
     <h2>Component Calculator</h2>
     <Calculator />
+    <h2>Component StateUpApp</h2>
+    <StateUpApp />
   </div>
 )
 
