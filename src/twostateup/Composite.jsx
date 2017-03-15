@@ -1,14 +1,17 @@
 import React from 'react'
-import Sub from './Sub'
-import StateUp from '../common/StateUp' 
+import { Sub, SubState } from './Subs'
+import StateUp from '../common/StateUp'
 
 export default class Composite extends StateUp(React.Component) {
 
   constructor() {
     super()
+    console.log(`Sub ${Sub}`)
+    // console.log(`Sub.prototype ${Sub.prototype}`)
+    // console.log(`Sub.prototype.creatPstate ${Sub.prototype.creatPstate}`)
     this.state = {
-      sub1: new Sub.State(),
-      sub2: new Sub.State()
+      sub1: new SubState(),
+      sub2: new SubState()
     }
   }
 

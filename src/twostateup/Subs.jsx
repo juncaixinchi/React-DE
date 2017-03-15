@@ -5,14 +5,14 @@ import muiThemeable from 'material-ui/styles/muiThemeable'
 import { CatSilhouette, BallOfYarn, Account, ReportProblem, HDDIcon, RAIDIcon, UpIcon, DownIcon
 } from '../mui/svg'
 
-// @muiThemeable()
-class Sub extends React.PureComponent {
-
-  static State = class State {
-    constructor() {
-      this.label = ''
-    }
+export class SubState {
+  constructor() {
+    this.label = ''
   }
+}
+
+@muiThemeable()
+export class Sub extends React.PureComponent {
 
   constructor() {
     super()
@@ -24,6 +24,9 @@ class Sub extends React.PureComponent {
         </div>
       </div>
     )
+  }
+  CreatPstate() {
+    return new SubState()
   }
 
   render() {
@@ -45,5 +48,3 @@ class Sub extends React.PureComponent {
     )
   }
 }
-
-export default Sub

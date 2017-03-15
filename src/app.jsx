@@ -20,7 +20,7 @@ const App = () => (
       <div>
         <h2>Component MixStateUp</h2>
         <MixStateUp />
-        <h2>Component TwoStateUpApp wirh Material-ui</h2>
+        <h2>Component TwoStateUpApp with Material-ui</h2>
         <Composite />
       </div>
       <div style={{ display: 'none' }}>
