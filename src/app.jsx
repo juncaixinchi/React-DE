@@ -9,6 +9,7 @@ import StateUpApp from './stateup/StateUpApp'
 import Composite from './twostateup/Composite'
 import Deskmark from './Deskmark/Deskmark'
 import VpStateUp from './vpstateup/Parent'
+import MixStateUp from './mixstateup/Parent'
 
 // required by Material UI
 injectTapEventPlugin()
@@ -17,10 +18,12 @@ const App = () => (
   <MuiThemeProvider>
     <div>
       <div>
-        <h2>Component Vpstateup</h2>
-        <VpStateUp />
+        <h2>Component MixStateUp</h2>
+        <MixStateUp />
       </div>
       <div style={{ display: 'none' }}>
+        <h2>Component Vpstateup</h2>
+        <VpStateUp />
         <h2>Component TwoStateUpApp</h2>
         <Composite />
         <h2>Component Deskmark</h2>
