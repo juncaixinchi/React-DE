@@ -20,7 +20,16 @@ module.exports = {
           path.resolve(ROOT_PATH, 'src')
         ],
         loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        include: [
+          path.resolve(ROOT_PATH, 'src')
+        ],
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
+
+
     ]
   },
   resolve: {

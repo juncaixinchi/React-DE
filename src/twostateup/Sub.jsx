@@ -6,12 +6,14 @@ import { CatSilhouette, BallOfYarn, Account, ReportProblem, HDDIcon, RAIDIcon, U
 } from '../mui/svg'
 
 // @muiThemeable()
-export default class Sub extends React.PureComponent {
+class Sub extends React.PureComponent {
+
   static State = class State {
     constructor() {
       this.label = ''
     }
   }
+
   constructor() {
     super()
     this.MuiCompo = () => (
@@ -36,7 +38,7 @@ export default class Sub extends React.PureComponent {
           {this.props.state.label}
         </button>
         <div>
-          <span style={{ color: primary1Color }}>aaa</span>
+          <span style={{ color: primary1Color }}>MuiCompo</span>
           {this.MuiCompo()}
         </div>
       </div>
@@ -44,3 +46,4 @@ export default class Sub extends React.PureComponent {
   }
 }
 
+export default Sub
