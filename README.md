@@ -41,3 +41,17 @@ ESLint 是一个插件化的javascript 代码检测工具，它可以用于检�
 	eslint --fix file.jsx
 
 Eslint的配置文件，`.eslintrc`
+
+## 命令
+
+Set Environment to Production
+
+    export NODE_ENV=production
+
+Build
+
+    npm run build
+
+Run develop server
+
+    npm run dev
