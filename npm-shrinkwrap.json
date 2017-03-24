@@ -154,6 +154,11 @@
       "from": "react-event-listener@>=0.4.0 <0.5.0",
       "resolved": "https://registry.npmjs.org/react-event-listener/-/react-event-listener-0.4.2.tgz"
     },
+    "react-tap-event-plugin": {
+      "version": "2.0.1",
+      "from": "react-tap-event-plugin@>=2.0.1 <3.0.0",
+      "resolved": "https://registry.npmjs.org/react-tap-event-plugin/-/react-tap-event-plugin-2.0.1.tgz"
+    },
     "recompose": {
       "version": "0.22.0",
       "from": "recompose@>=0.22.0 <0.23.0",

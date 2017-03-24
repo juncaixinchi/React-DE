@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
-import Mui from './mui/Mui'
-import Calculator from './calculator/Calculator'
-import StateUpApp from './stateup/StateUpApp'
-import Composite from './twostateup/Composite'
-import Deskmark from './Deskmark/Deskmark'
-import VpStateUp from './vpstateup/Parent'
-import MixStateUp from './mixstateup/Parent'
+import Mui from './components/mui/Mui'
+import Calculator from './components/calculator/Calculator'
+import StateUpApp from './components/stateup/StateUpApp'
+import Composite from './components/twostateup/Composite'
+import Deskmark from './components/Deskmark/Deskmark'
+import VpStateUp from './components/vpstateup/Parent'
+import MixStateUp from './components/mixstateup/Parent'
+import JsDesignPatterns from './jsDesignPatterns/Main'
+
+import CustomDialog from './CustomDialog'
 
 // required by Material UI
 injectTapEventPlugin()
@@ -18,12 +21,15 @@ const App = () => (
   <MuiThemeProvider>
     <div>
       <div>
+        <CustomDialog />
+      </div>
+      <div style={{ display: 'none' }}>
+        <h2>Component JsDesignPatterns</h2>
+        <JsDesignPatterns />
         <h2>Component MixStateUp</h2>
         <MixStateUp />
         <h2>Component TwoStateUpApp with Material-ui</h2>
         <Composite />
-      </div>
-      <div style={{ display: 'none' }}>
         <h2>Component Vpstateup</h2>
         <VpStateUp />
         <h2>Component Deskmark</h2>
