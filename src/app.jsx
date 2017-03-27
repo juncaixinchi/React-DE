@@ -12,7 +12,7 @@ import VpStateUp from './components/vpstateup/Parent'
 import MixStateUp from './components/mixstateup/Parent'
 import JsDesignPatterns from './jsDesignPatterns/Main'
 
-import CustomDialog from './CustomDialog'
+import CustomDialog from './components/customdialog/CustomDialog'
 
 // required by Material UI
 injectTapEventPlugin()

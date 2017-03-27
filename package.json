@@ -36,10 +36,13 @@
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
+    "gsap": "^1.19.1",
+    "keycode": "https://registry.npmjs.org/keycode/-/keycode-2.1.8.tgz",
     "marked": "^0.3.6",
     "material-ui": "^0.17.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-event-listener": "https://registry.npmjs.org/react-event-listener/-/react-event-listener-0.4.2.tgz",
     "react-tap-event-plugin": "^2.0.1"
   }
 }
