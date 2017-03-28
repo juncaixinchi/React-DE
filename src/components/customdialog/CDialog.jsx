@@ -26,6 +26,7 @@ class TransitionItem extends React.Component {
         this.props.onRequestClose(!!buttonClicked)
       }
     }
+
     this.handleTouchTapOverlay = () => {
       this.requestClose(false)
     }
@@ -36,6 +37,7 @@ class TransitionItem extends React.Component {
         default: return 0
       }
     }
+
     this.animation = (status) => {
       const transformItem = document.getElementById('transformItem')
       const overlay = document.getElementById('overlay')
@@ -85,8 +87,7 @@ class TransitionItem extends React.Component {
           zIndex: 1500,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          transition: 'all 0ms cubic-bezier(0.23, 1, 0.32, 1)'
+          justifyContent: 'center'
         }}
       >
         <div
@@ -122,7 +123,7 @@ class TransitionItem extends React.Component {
   }
 }
 
-export default class CDialog extends React.Component {
+export default class CDialog extends React.PureComponent {
 
   static propTypes = {
     open: PropTypes.bool.isRequired

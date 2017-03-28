@@ -21,11 +21,12 @@ const App = () => (
   <MuiThemeProvider>
     <div>
       <div>
+        <h2>Component CustomDialog</h2>
         <CustomDialog />
       </div>
       <div style={{ display: 'none' }}>
-        <h2>Component JsDesignPatterns</h2>
-        <JsDesignPatterns />
+        <h2>Component CustomDialog</h2>
+        <CustomDialog />
         <h2>Component MixStateUp</h2>
         <MixStateUp />
         <h2>Component TwoStateUpApp with Material-ui</h2>
