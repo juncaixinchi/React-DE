@@ -21,18 +21,20 @@ const App = () => (
   <MuiThemeProvider>
     <div>
       <div>
-        <h2>Component CustomDialog</h2>
-        <CustomDialog />
+        <h2>Component Vpstateup</h2>
+        <VpStateUp />
       </div>
       <div style={{ display: 'none' }}>
+        <h2>Component Mui</h2>
+        <Mui />
+        <h2>Component CustomDialog</h2>
+        <CustomDialog />
         <h2>Component CustomDialog</h2>
         <CustomDialog />
         <h2>Component MixStateUp</h2>
         <MixStateUp />
         <h2>Component TwoStateUpApp with Material-ui</h2>
         <Composite />
-        <h2>Component Vpstateup</h2>
-        <VpStateUp />
         <h2>Component Deskmark</h2>
         <Deskmark />
         <h2>Component Mui</h2>
