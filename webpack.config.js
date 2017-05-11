@@ -22,7 +22,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         include: [
           path.resolve(ROOT_PATH, 'src')
         ],
